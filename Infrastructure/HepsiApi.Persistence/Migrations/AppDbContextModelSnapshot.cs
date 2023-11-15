@@ -49,23 +49,23 @@ namespace HepsiApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 849, DateTimeKind.Local).AddTicks(7236),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2629),
                             IsDeleted = false,
-                            Name = "Clothing, Outdoors & Toys"
+                            Name = "Industrial & Tools"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 849, DateTimeKind.Local).AddTicks(7246),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2644),
                             IsDeleted = false,
-                            Name = "Clothing"
+                            Name = "Health & Tools"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 849, DateTimeKind.Local).AddTicks(7263),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2652),
                             IsDeleted = true,
-                            Name = "Sports & Industrial"
+                            Name = "Sports"
                         });
                 });
 
@@ -101,7 +101,7 @@ namespace HepsiApi.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 850, DateTimeKind.Local).AddTicks(2126),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6906),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -110,7 +110,7 @@ namespace HepsiApi.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 850, DateTimeKind.Local).AddTicks(2129),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6909),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -119,7 +119,7 @@ namespace HepsiApi.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 850, DateTimeKind.Local).AddTicks(2132),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6911),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -128,7 +128,7 @@ namespace HepsiApi.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 850, DateTimeKind.Local).AddTicks(2134),
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6912),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -172,28 +172,28 @@ namespace HepsiApi.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 854, DateTimeKind.Local).AddTicks(1642),
-                            Description = "Consequatur dolayı rem kapının layıkıyla.",
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4632),
+                            Description = "Consequatur makinesi deleniti odit fugit.",
                             IsDeleted = false,
-                            Title = "Rem."
+                            Title = "İure."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 854, DateTimeKind.Local).AddTicks(1688),
-                            Description = "Eaque commodi qui enim enim.",
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4675),
+                            Description = "Dolore layıkıyla autem gazete sit.",
                             IsDeleted = true,
-                            Title = "Dignissimos blanditiis."
+                            Title = "Gül göze."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 854, DateTimeKind.Local).AddTicks(1782),
-                            Description = "Sit bilgiyasayarı magni voluptate totam.",
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4710),
+                            Description = "Numquam telefonu biber ipsa veniam.",
                             IsDeleted = false,
-                            Title = "Sokaklarda."
+                            Title = "Voluptatem."
                         });
                 });
 
@@ -239,23 +239,23 @@ namespace HepsiApi.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 867, DateTimeKind.Local).AddTicks(7863),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Discount = 2.519868647168440m,
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 903, DateTimeKind.Local).AddTicks(9583),
+                            Description = "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+                            Discount = 9.00066328619210m,
                             IsDeleted = false,
-                            Price = 467.75m,
-                            Title = "Handmade Concrete Table"
+                            Price = 740.18m,
+                            Title = "Ergonomic Plastic Bacon"
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 3,
-                            CreatedDate = new DateTime(2023, 10, 27, 16, 5, 50, 867, DateTimeKind.Local).AddTicks(7900),
-                            Description = "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-                            Discount = 2.807259843142890m,
+                            CreatedDate = new DateTime(2023, 11, 15, 14, 28, 2, 903, DateTimeKind.Local).AddTicks(9615),
+                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+                            Discount = 5.309008189289010m,
                             IsDeleted = false,
-                            Price = 811.77m,
-                            Title = "Fantastic Fresh Pizza"
+                            Price = 650.62m,
+                            Title = "Handmade Granite Salad"
                         });
                 });
 

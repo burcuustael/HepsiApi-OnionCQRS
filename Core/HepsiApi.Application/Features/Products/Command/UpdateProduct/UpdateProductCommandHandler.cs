@@ -23,7 +23,14 @@ namespace HepsiApi.Application.Features.Products.Command.UpdateProduct
             var productCategories = await unitOfWork.GetReadRepository<ProductCategory>()
                 .GetAllAsync(x=>x.ProductId==product.Id);
 
-            await unitOfWork.GetWriteRepository<ProductCategory>()
+            await unitOfWork.GetWriteRepository<ProductCategory>().HardDeleteRangeAsync(productCategories);
+            
+            foreach (var categoryId in request.CategoryIds)
+                await unitOfWork.GetWriteRepository<ProductCategory>().AddAsync(new() { CategoryId= categoryId,ProductId=product.Id});
+
+            await unitOfWork.GetWriteRepository<Product>().UpdateAsync(product);
+            await unitOfWork.SaveAsync();
+
         }
     }
 }

@@ -94,24 +94,24 @@ namespace HepsiApi.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CategoryProduct",
+                name: "ProductCategories",
                 columns: table => new
                 {
-                    CategoriesId = table.Column<int>(type: "int", nullable: false),
-                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CategoryProduct", x => new { x.CategoriesId, x.ProductsId });
+                    table.PrimaryKey("PK_ProductCategories", x => new { x.ProductId, x.CategoryId });
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Categories_CategoriesId",
-                        column: x => x.CategoriesId,
+                        name: "FK_ProductCategories_Categories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Products_ProductsId",
-                        column: x => x.ProductsId,
+                        name: "FK_ProductCategories_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -122,9 +122,9 @@ namespace HepsiApi.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 10, 2, 11, 55, 9, 788, DateTimeKind.Local).AddTicks(5359), false, "Automotive & Computers" },
-                    { 2, new DateTime(2023, 10, 2, 11, 55, 9, 788, DateTimeKind.Local).AddTicks(5409), false, "Books, Outdoors & Garden" },
-                    { 3, new DateTime(2023, 10, 2, 11, 55, 9, 788, DateTimeKind.Local).AddTicks(5697), true, "Automotive, Tools & Clothing" }
+                    { 1, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2629), false, "Industrial & Tools" },
+                    { 2, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2644), false, "Health & Tools" },
+                    { 3, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(2652), true, "Sports" }
                 });
 
             migrationBuilder.InsertData(
@@ -132,10 +132,10 @@ namespace HepsiApi.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name", "ParentId", "Priorty" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 10, 2, 11, 55, 9, 789, DateTimeKind.Local).AddTicks(1088), false, "Elektrik", 0, 1 },
-                    { 2, new DateTime(2023, 10, 2, 11, 55, 9, 789, DateTimeKind.Local).AddTicks(1095), false, "Moda", 0, 2 },
-                    { 3, new DateTime(2023, 10, 2, 11, 55, 9, 789, DateTimeKind.Local).AddTicks(1100), false, "Bilgisayar", 1, 1 },
-                    { 4, new DateTime(2023, 10, 2, 11, 55, 9, 789, DateTimeKind.Local).AddTicks(1106), false, "Kadın", 2, 1 }
+                    { 1, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6906), false, "Elektrik", 0, 1 },
+                    { 2, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6909), false, "Moda", 0, 2 },
+                    { 3, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6911), false, "Bilgisayar", 1, 1 },
+                    { 4, new DateTime(2023, 11, 15, 14, 28, 2, 895, DateTimeKind.Local).AddTicks(6912), false, "Kadın", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -143,9 +143,9 @@ namespace HepsiApi.Persistence.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "Description", "IsDeleted", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 10, 2, 11, 55, 9, 798, DateTimeKind.Local).AddTicks(5240), "Vel bundan ekşili exercitationem quia.", false, "Vel." },
-                    { 2, 3, new DateTime(2023, 10, 2, 11, 55, 9, 798, DateTimeKind.Local).AddTicks(5365), "Şafak sed eos de explicabo.", true, "Bahar dergi." },
-                    { 3, 4, new DateTime(2023, 10, 2, 11, 55, 9, 798, DateTimeKind.Local).AddTicks(5411), "Kalemi çobanın dağılımı camisi dolorem.", false, "Mi." }
+                    { 1, 1, new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4632), "Consequatur makinesi deleniti odit fugit.", false, "İure." },
+                    { 2, 3, new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4675), "Dolore layıkıyla autem gazete sit.", true, "Gül göze." },
+                    { 3, 4, new DateTime(2023, 11, 15, 14, 28, 2, 899, DateTimeKind.Local).AddTicks(4710), "Numquam telefonu biber ipsa veniam.", false, "Voluptatem." }
                 });
 
             migrationBuilder.InsertData(
@@ -153,18 +153,18 @@ namespace HepsiApi.Persistence.Migrations
                 columns: new[] { "Id", "BrandId", "CreatedDate", "Description", "Discount", "IsDeleted", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2023, 10, 2, 11, 55, 9, 804, DateTimeKind.Local).AddTicks(6007), "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016", 4.689733638177250m, false, 139.05m, "Sleek Soft Gloves" },
-                    { 2, 3, new DateTime(2023, 10, 2, 11, 55, 9, 804, DateTimeKind.Local).AddTicks(6048), "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive", 4.582524111670340m, false, 118.11m, "Intelligent Cotton Bike" }
+                    { 1, 1, new DateTime(2023, 11, 15, 14, 28, 2, 903, DateTimeKind.Local).AddTicks(9583), "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive", 9.00066328619210m, false, 740.18m, "Ergonomic Plastic Bacon" },
+                    { 2, 3, new DateTime(2023, 11, 15, 14, 28, 2, 903, DateTimeKind.Local).AddTicks(9615), "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles", 5.309008189289010m, false, 650.62m, "Handmade Granite Salad" }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CategoryProduct_ProductsId",
-                table: "CategoryProduct",
-                column: "ProductsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Details_CategoryId",
                 table: "Details",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductCategories_CategoryId",
+                table: "ProductCategories",
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
@@ -177,16 +177,16 @@ namespace HepsiApi.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CategoryProduct");
-
-            migrationBuilder.DropTable(
                 name: "Details");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "ProductCategories");
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Brands");
